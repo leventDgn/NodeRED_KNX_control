@@ -108,3 +108,31 @@ node-red-start
  ```
  # NodeRED'de KNX Kontrolü Nasıl Oluşturulur
  NodeRED, kullanıcıların farklı cihazlar ve hizmetler arasında veri akışı oluşturmasını sağlayan güçlü bir görsel programlama aracıdır. KNX ev sistemi de dahil olmak üzere bir dizi farklı donanım cihazını kontrol etmek için kullanılabilir. NodeRED üzerinde bir KNX kontrolü oluşturma adımları şunlardır:
+ 
+## 1. Adım: KNX Kontrol Noktalarını Kurun
+
+Node-RED üzerinde bir KNX kontrolü oluşturmanın ilk adımı, KNX kontrol noktalarını kurmaktır. Bu kontrol noktaları, kullanıcıların KNX sisteminden veri gönderip almasına izin verir. KNX kontrol noktalarını kurmak için, kullanıcılar Node-RED Palet Yöneticisine gidebilir ve "node-red-contrib-knx" için arama yapabilir.
+
+## 2. Adım: Akışa KNX Kontrol Noktalarını Ekleyin
+
+KNX kontrol noktalarını kurulduktan sonra, kullanıcılar bunları Node-RED akışlarına ekleyebilir. Bu, KNX kontrol noktalarını akış tuvaline sürükleyip bırakılarak yapılabilir.
+ 
+## 3. Adım: KNX Kontrol Noktalarını Yapılandırın
+
+Kullanıcıların, akışa eklenen KNX kontrol noktalarını KNX sistemlerine bağlanacak şekilde yapılandırması gerekmektedir. Bunu, kontrol noktalarına çift tıklayarak, grup adresi ve bağlantı detayları gibi gerekli bilgileri girerek yapabilir.
+
+## 4. Adım: Bir Kontrol Arayüzü Oluşturun
+
+KNX kontrol noktaları yapılandırıldıktan sonra, kullanıcılar KNX sistemleri için bir kontrol arabirimi oluşturabilir. Akış tuvaline anahtarlar, kaydırıcılar ve düğmeler gibi kontrol noktaları eklenebilir ve ardından bunlar KNX kontrol noktalarına bağlanabilirler.
+
+## 5. Adım: Bulut bağlantısı üzerinden kontrol
+
+Yapılandırılan akış ve oluşturulan kontrol arabirimi ile kullanıcılar akışı Node-RED sunucularına gönderebilir. Bu, KNX sistemlerini internet vasıtası aracılığıyla dünya üzerindeki herhangi bir yerden kontrol etmelerini sağlayacaktır.
+
+# Sonuç
+Orange Pi Zero, düşük maliyeti, küçük boyutu ve güçlü performansı ile güvenilir ve verimli tek kartlı bir bilgisayar arayan herkes için ideal bir seçimdir.
+Armbian, Orange Pi Zero gibi ARM tabanlı cihazlarda çalışmak için güçlü ve verimli bir işletim sistemidir.
+Node-RED, IoT uygulamaları geliştirmek için güçlü bir araçtır ve Orange Pi Zero'ya kurulumu kolaydır. Bu yazıda özetlenen adımları izleyerek Orange Pi Zero'nuzda Node-RED'i hızlıca kullanmaya başlayabilir ve kendi IoT uygulamalarınızı geliştirmeye başlayabilirsiniz.
+Sonuç olarak, Node-RED üzerinde bir KNX kontrolü oluşturmak, evdeki bir dizi farklı cihazı otomatikleştirmenin ve kontrol etmenin kolay ve kullanışlı bir yoludur. Kullanıcılar, yukarıda anlattığım adımları takip ederek, kendi özel ihtiyaç ve gereksinimlerine göre uyarlanmış, KNX sistemlerini kolaylıkla kontrol etmelerine olanak tanıyan özel bir kontrol ara yüzünü hızlı bir şekilde oluşturabilir.
+
+ 
