@@ -706,8 +706,8 @@
         "formatnegativevalue": "leave",
         "formatdecimalsvalue": 999,
         "passthrough": "no",
-        "x": 630,
-        "y": 720,
+        "x": 570,
+        "y": 740,
         "wires": [
             []
         ]
@@ -777,38 +777,6 @@
                 "5ac19e9271d41a1b"
             ]
         ]
-    },
-    {
-        "id": "fa5f3777bc33572a",
-        "type": "knxUltimateViewer",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "name": "KNXViewer",
-        "x": 170,
-        "y": 860,
-        "wires": [
-            [
-                "f5d19c033d3fd96c"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "f5d19c033d3fd96c",
-        "type": "ui_text",
-        "z": "0fac4a1004299801",
-        "group": "c977213616837f5f",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 390,
-        "y": 860,
-        "wires": []
     },
     {
         "id": "350283f2a1a5971d",
@@ -1105,8 +1073,8 @@
                 "send": "false"
             }
         ],
-        "x": 1130,
-        "y": 720,
+        "x": 1450,
+        "y": 760,
         "wires": [
             [
                 "7e65bfe1.c34ac8"
@@ -1126,18 +1094,18 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
-        "y": 720,
+        "x": 1770,
+        "y": 760,
         "wires": []
     },
     {
         "id": "aeea8d70.9331a",
         "type": "comment",
         "z": "0fac4a1004299801",
-        "name": "Morning Scene, Scene number: 1",
+        "name": "Day Scene, Scene number: 1",
         "info": "",
-        "x": 1030,
-        "y": 680,
+        "x": 1340,
+        "y": 720,
         "wires": []
     },
     {
@@ -1174,8 +1142,8 @@
                 "send": "true"
             }
         ],
-        "x": 1130,
-        "y": 840,
+        "x": 1450,
+        "y": 880,
         "wires": [
             [
                 "7614d2f7d17e11a8"
@@ -1195,8 +1163,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
-        "y": 840,
+        "x": 1770,
+        "y": 880,
         "wires": []
     },
     {
@@ -1205,9 +1173,103 @@
         "z": "0fac4a1004299801",
         "name": "Evening Scene, Scene number: 2",
         "info": "",
-        "x": 1030,
-        "y": 800,
+        "x": 1350,
+        "y": 840,
         "wires": []
+    },
+    {
+        "id": "68290b05441bb270",
+        "type": "ui_button",
+        "z": "0fac4a1004299801",
+        "name": "",
+        "group": "eab0440bee638c40",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Activate Night Scene",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 900,
+        "y": 880,
+        "wires": [
+            [
+                "4cd556d1a9ec1143"
+            ]
+        ]
+    },
+    {
+        "id": "4cd556d1a9ec1143",
+        "type": "function",
+        "z": "0fac4a1004299801",
+        "name": "recall Night Scene",
+        "func": "msg.recallscene = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 880,
+        "wires": [
+            [
+                "8df946a261479e75"
+            ]
+        ]
+    },
+    {
+        "id": "a419b3bf1cb87d88",
+        "type": "ui_button",
+        "z": "0fac4a1004299801",
+        "name": "",
+        "group": "eab0440bee638c40",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Activate Day Scene",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 890,
+        "y": 760,
+        "wires": [
+            [
+                "6536b5745229edca"
+            ]
+        ]
+    },
+    {
+        "id": "6536b5745229edca",
+        "type": "function",
+        "z": "0fac4a1004299801",
+        "name": "recall Day Scene",
+        "func": "msg.recallscene = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 760,
+        "wires": [
+            [
+                "ed211117.1dfac"
+            ]
+        ]
     },
     {
         "id": "eab0440bee638c40",
@@ -1260,17 +1322,6 @@
         "name": "Koridor",
         "tab": "ba71f8889e6871d0",
         "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "c977213616837f5f",
-        "type": "ui_group",
-        "name": "Debug Out",
-        "tab": "ba71f8889e6871d0",
-        "order": 4,
         "disp": true,
         "width": "6",
         "collapse": false,
