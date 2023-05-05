@@ -77,28 +77,29 @@ Kurulum sürecini tamamlamak için ekrandaki talimatları izliyoruz. İlk olarak
 Kurulumu tamamlamış olduk. Konsol ekranımız aşağıdaki gibi görünüyor. Artık nodered kurulumuna geçebiliriz.
 ![image](https://user-images.githubusercontent.com/35852515/235507479-83c7e22f-0644-4fa9-9956-ef270d3694dd.png)
 
-#Node-RED'i Orange Pi Zero'ya Kurmak
+# Node-RED'i Orange Pi Zero'ya Kurmak
 Node-RED'i bir Orange Pi Zero'ya kurmak istiyorsanız, doğru yere geldiniz. Node-RED, cihazlarınız için kolay ve hızlı bir şekilde uygulamalar oluşturmanıza olanak tanıyan Nesnelerin İnterneti (IoT) için tasarlanmış açık kaynaklı bir programlama aracıdır. Bu yazımızda, Orange Pi Zero üzerinde Node-RED kurulum adımlarını izleyeceğiz.
 
-##Node-RED nedir?
+## Node-RED nedir?
 Node-RED, IoT uygulamaları için tasarlanmış akış tabanlı bir programlama aracıdır. Farklı görevleri gerçekleştiren önceden oluşturulmuş kod parçaları olan düğümleri bağlamayı ve yapılandırmayı kolaylaştıran web tarayıcısı tabanlı bir düzenleyici kullanır. Node-RED ile çok fazla kod yazmak zorunda kalmadan IoT cihazlarınız için hızlı bir şekilde prototip oluşturabilir ve uygulamalar geliştirebilirsiniz.
 
-##Node-RED'i Orange Pi Zero'ya Kurmak
+## Node-RED'i Orange Pi Zero'ya Kurmak
 Node-RED'i Orange Pi Zero'ya kurmak için şu adımları izlemeniz gerekir:
 
 1.	Öncelikle Orange Pi Zero'nuzu internete bağlamanız gerekiyor. Bunu bir ethernet kablosu bağlayarak veya bir Wi-Fi bağlantısı kurarak yapabilirsiniz.
 2.	Ardından, Orange Pi Zero'nuzda bir terminal penceresi açmanız gerekir.
 3.	Node-RED'i yüklemek için aşağıdaki komutu çalıştırın:
-
+ ```
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
-
+ ```
 
 4.	Node-RED kurulduktan sonra, aşağıdaki komutu çalıştırarak başlatabilirsiniz:
 
+ ```
 node-red-start
+ ```
 
-
-5.	Bir web tarayıcısı açın ve Node-RED editörüne erişmek için http://<your Orange Pi Zero IP address>:1880` adresine gidin. NodeRED editörü aşağıdaki gibi açılacaktır.
+5.	Bir web tarayıcısı açın ve Node-RED editörüne erişmek için http://YourOrangePiZeroIPAddress:1880` adresine gidin. NodeRED editörü aşağıdaki gibi açılacaktır.
 ![image](https://user-images.githubusercontent.com/35852515/235507645-73ab052c-e2ab-4bc5-9ac3-7e5fed78b2af.png)
  
  6.	Opi’yi resetlediğimizde nodeRED otomatik olarak başlamıyor bu problemi çözmek için aşağıdaki komutla nodeRED servisini enable etmemiz gerekiyor.
