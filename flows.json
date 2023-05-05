@@ -68,7 +68,7 @@
         "animate": false,
         "className": "",
         "x": 420,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "dd5f64ee59275596"
@@ -95,7 +95,7 @@
         "step": 1,
         "className": "",
         "x": 430,
-        "y": 200,
+        "y": 160,
         "wires": [
             [
                 "8b01473fa6c36af1"
@@ -282,7 +282,7 @@
         "formatdecimalsvalue": 999,
         "passthrough": "no",
         "x": 650,
-        "y": 140,
+        "y": 100,
         "wires": [
             []
         ]
@@ -311,7 +311,7 @@
         "formatdecimalsvalue": 999,
         "passthrough": "no",
         "x": 660,
-        "y": 200,
+        "y": 160,
         "wires": [
             []
         ]
@@ -459,8 +459,7 @@
         "y": 40,
         "wires": [
             [
-                "575eab1ba8592c5e",
-                "133a1669768f9de1"
+                "575eab1ba8592c5e"
             ]
         ]
     },
@@ -488,7 +487,7 @@
         "formatdecimalsvalue": 999,
         "passthrough": "no",
         "x": 180,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "0dcd24b1c5cbae9f"
@@ -519,7 +518,7 @@
         "formatdecimalsvalue": 999,
         "passthrough": "no",
         "x": 170,
-        "y": 200,
+        "y": 160,
         "wires": [
             [
                 "817fdb20ad5458d6"
@@ -812,32 +811,403 @@
         "wires": []
     },
     {
-        "id": "133a1669768f9de1",
-        "type": "ui_button",
+        "id": "350283f2a1a5971d",
+        "type": "ui_slider",
         "z": "0fac4a1004299801",
         "name": "",
+        "label": "Lambader Anahtar",
+        "tooltip": "",
         "group": "eab0440bee638c40",
         "order": 3,
         "width": 0,
         "height": 0,
-        "passthru": false,
-        "label": "button",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
+        "passthru": true,
+        "outs": "all",
         "topic": "topic",
         "topicType": "msg",
-        "x": 390,
-        "y": 80,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 220,
         "wires": [
             [
-                "e63e99080a42e4cb"
+                "1080ae67660f6897"
             ]
         ]
+    },
+    {
+        "id": "1080ae67660f6897",
+        "type": "knxUltimate",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "topic": "1/1/5",
+        "outputtopic": "",
+        "dpt": "1.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Lambader",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 660,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf87b2fddb4bfe10",
+        "type": "knxUltimate",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "topic": "1/2/5",
+        "outputtopic": "",
+        "dpt": "1.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Lambader Feedback",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "350283f2a1a5971d"
+            ]
+        ]
+    },
+    {
+        "id": "3d101cf6f3e08915",
+        "type": "knxUltimate",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "topic": "1/2/5",
+        "outputtopic": "",
+        "dpt": "1.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Lambader Feedback",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0bd16bf5b5e75987",
+        "type": "knxUltimate",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "topic": "1/1/5",
+        "outputtopic": "",
+        "dpt": "1.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Lambader",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 380,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "83500b30814a175f",
+        "type": "knxUltimate",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "topic": "1/1/5",
+        "outputtopic": "",
+        "dpt": "1.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Lambader",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 380,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52052f884db03a6a",
+        "type": "knxUltimate",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "topic": "1/1/5",
+        "outputtopic": "",
+        "dpt": "1.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Lambader",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 380,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7afd8795a479f91c",
+        "type": "knxUltimate",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "topic": "1/1/5",
+        "outputtopic": "",
+        "dpt": "1.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Lambader",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 380,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fbce23ea9ab9dab2",
+        "type": "knxUltimateSceneController",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "name": "",
+        "outputtopic": "",
+        "topic": "1 1 11",
+        "dpt": "18.001",
+        "topicTrigger": "{save_recall:0, scenenumber:2}",
+        "topicSave": "",
+        "dptSave": "",
+        "topicSaveTrigger": "true",
+        "property": "payload",
+        "propertyType": {},
+        "rules": [
+            {
+                "topic": "",
+                "devicename": "",
+                "dpt": null,
+                "send": ""
+            }
+        ],
+        "x": 110,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed211117.1dfac",
+        "type": "knxUltimateSceneController",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "name": "Recall: Panasonic Push Button 1 Short press/Save: Long press",
+        "outputtopic": "",
+        "topic": "0/0/7",
+        "dpt": "18.001",
+        "topicTrigger": "{save_recall:0, scenenumber:1}",
+        "topicSave": "0/0/8",
+        "dptSave": "18.001",
+        "topicSaveTrigger": "{save_recall:1, scenenumber:1}",
+        "propertyType": {},
+        "rules": [
+            {
+                "topic": "0/1/1",
+                "devicename": "Blind Control",
+                "dpt": "5.001",
+                "send": "80"
+            },
+            {
+                "topic": "wait",
+                "devicename": "Wait 10 seconds. (s=second, m=minute, h=hour)",
+                "dpt": "1.001",
+                "send": "5s"
+            },
+            {
+                "topic": "0/1/22",
+                "devicename": "Lamp Control",
+                "dpt": "1.001",
+                "send": "false"
+            }
+        ],
+        "x": 1130,
+        "y": 720,
+        "wires": [
+            [
+                "7e65bfe1.c34ac8"
+            ]
+        ]
+    },
+    {
+        "id": "7e65bfe1.c34ac8",
+        "type": "debug",
+        "z": "0fac4a1004299801",
+        "name": "debug out1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1490,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "aeea8d70.9331a",
+        "type": "comment",
+        "z": "0fac4a1004299801",
+        "name": "Morning Scene, Scene number: 1",
+        "info": "",
+        "x": 1030,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "8df946a261479e75",
+        "type": "knxUltimateSceneController",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "name": "Recall: Panasonic Push Button 2 Short press/Save: Long press",
+        "outputtopic": "",
+        "topic": "0/0/7",
+        "dpt": "18.001",
+        "topicTrigger": "{save_recall:0, scenenumber:2}",
+        "topicSave": "0/0/8",
+        "dptSave": "18.001",
+        "topicSaveTrigger": "{save_recall:1, scenenumber:2}",
+        "propertyType": {},
+        "rules": [
+            {
+                "topic": "0/1/1",
+                "devicename": "Blind Control",
+                "dpt": "5.001",
+                "send": "0"
+            },
+            {
+                "topic": "wait",
+                "devicename": "Wait 10 seconds. (s=second, m=minute, h=hour)",
+                "dpt": "1.001",
+                "send": "5s"
+            },
+            {
+                "topic": "0/1/22",
+                "devicename": "Lamp Control",
+                "dpt": "1.001",
+                "send": "true"
+            }
+        ],
+        "x": 1130,
+        "y": 840,
+        "wires": [
+            [
+                "7614d2f7d17e11a8"
+            ]
+        ]
+    },
+    {
+        "id": "7614d2f7d17e11a8",
+        "type": "debug",
+        "z": "0fac4a1004299801",
+        "name": "debug out1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1490,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "09856401180ca153",
+        "type": "comment",
+        "z": "0fac4a1004299801",
+        "name": "Evening Scene, Scene number: 2",
+        "info": "",
+        "x": 1030,
+        "y": 800,
+        "wires": []
     },
     {
         "id": "eab0440bee638c40",
