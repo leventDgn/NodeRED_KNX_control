@@ -1,11 +1,802 @@
 [
     {
-        "id": "0fac4a1004299801",
+        "id": "43b22494dce5e8dc",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Koridor",
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "0fac4a1004299801",
+        "type": "tab",
+        "label": "Oturma Odası",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f410ce01cf4c6bc4",
+        "type": "tab",
+        "label": "Yatak Odası",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "eab0440bee638c40",
+        "type": "ui_group",
+        "name": "Oturma Odası",
+        "tab": "ba71f8889e6871d0",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ba71f8889e6871d0",
+        "type": "ui_tab",
+        "name": "Evim",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3a72cf2217c14edc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8e18797ccc06bab1",
+        "type": "ui_group",
+        "name": "Yatak Odası",
+        "tab": "ba71f8889e6871d0",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "22f77384684a5c2b",
+        "type": "knxUltimate-config",
+        "host": "192.168.1.167",
+        "port": "3671",
+        "physAddr": "15.15.22",
+        "hostProtocol": "TunnelUDP",
+        "suppressACKRequest": false,
+        "csv": "",
+        "KNXEthInterface": "Auto",
+        "KNXEthInterfaceManuallyInput": "",
+        "statusDisplayLastUpdate": true,
+        "statusDisplayDeviceNameWhenALL": true,
+        "statusDisplayDataPoint": false,
+        "stopETSImportIfNoDatapoint": "stop",
+        "loglevel": "error",
+        "name": "KNX Gateway",
+        "localEchoInTunneling": true,
+        "delaybetweentelegrams": "50",
+        "delaybetweentelegramsfurtherdelayREAD": "1",
+        "ignoreTelegramsWithRepeatedFlag": false,
+        "autoReconnect": true
+    },
+    {
+        "id": "543e0315dcb6b404",
+        "type": "ui_group",
+        "name": "Koridor",
+        "tab": "ba71f8889e6871d0",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c977213616837f5f",
+        "type": "ui_group",
+        "name": "Debug Out",
+        "tab": "ba71f8889e6871d0",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "67308f4f.15f4e8",
+        "type": "knxUltimate-config",
+        "host": "224.0.23.12",
+        "port": "3671",
+        "physAddr": "15.15.22",
+        "hostProtocol": "Multicast",
+        "suppressACKRequest": false,
+        "csv": "\"Group name\"\t\"Address\"\t\"Central\"\t\"Unfiltered\"\t\"Description\"\t\"DatapointType\"\t\"Security\"\n\"Attuatori luci\"\t\"0/-/-\"\t\"\"\t\"\"\t\"\"\t\"\"\t\"Auto\"\n\"Luci primo piano\"\t\"0/0/-\"\t\"\"\t\"\"\t\"\"\t\"\"\t\"Auto\"\n\"Luce camera da letto\"\t\"0/0/1\"\t\"\"\t\"\"\t\"\"\t\"DPST-1-8\"\t\"Auto\"\n\"Luce loggia camera da letto\"\t\"0/0/2\"\t\"\"\t\"\"\t\"\"\t\"DPST-1-1\"\t\"Auto\"\n\"Luce camera armadi\"\t\"0/0/3\"\t\"\"\t\"\"\t\"\"\t\"DPST-1-1\"\t\"Auto\"\n\"Luce bagno grande\"\t\"0/0/4\"\t\"\"\t\"\"\t\"\"\t\"DPST-1-1\"\t\"Auto\"\n\"Luce loggia bagno grande\"\t\"0/0/5\"\t\"\"\t\"\"\t\"\"\t\"DPST-1-1\"\t\"Auto\"\n\"Luce specchio bagno grande (switch)\"\t\"0/0/6\"\t\"\"\t\"\"\t\"\"\t\"DPST-1-1\"\t\"Auto\"\n\"Luce lavanderia\"\t\"0/0/7\"\t\"\"\t\"\"\t\"\"\t\"DPST-1-1\"\t\"Auto\"\n\"Luce specchio lavanderia (switch)\"\t\"0/0/8\"\t\"\"\t\"\"\t\"\"\t\"DPST-1-1\"\t\"Auto\"\n\"Luce studio\"\t\"0/0/9\"\t\"\"\t\"\"\t\"\"\t\"DPST-1-1\"\t\"Auto\"",
+        "KNXEthInterface": "Auto",
+        "KNXEthInterfaceManuallyInput": "",
+        "statusDisplayLastUpdate": true,
+        "statusDisplayDeviceNameWhenALL": true,
+        "statusDisplayDataPoint": false,
+        "stopETSImportIfNoDatapoint": "skip",
+        "loglevel": "error",
+        "name": "Multicast Gateway",
+        "localEchoInTunneling": true,
+        "delaybetweentelegrams": "50",
+        "delaybetweentelegramsfurtherdelayREAD": "1",
+        "ignoreTelegramsWithRepeatedFlag": false,
+        "keyringFileXML": "",
+        "autoReconnect": "yes"
+    },
+    {
+        "id": "6dbfbf873096b34d",
+        "type": "ui_switch",
+        "z": "43b22494dce5e8dc",
+        "name": "",
+        "label": "Avize 1 Anahtar",
+        "tooltip": "",
+        "group": "543e0315dcb6b404",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 400,
+        "y": 60,
+        "wires": [
+            [
+                "5ac19e9271d41a1b"
+            ]
+        ]
+    },
+    {
+        "id": "5ac19e9271d41a1b",
+        "type": "knxUltimate",
+        "z": "43b22494dce5e8dc",
+        "server": "22f77384684a5c2b",
+        "topic": "3/1/1",
+        "outputtopic": "",
+        "dpt": "1.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Avize 1",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 590,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4cce9a1e931074f0",
+        "type": "knxUltimate",
+        "z": "43b22494dce5e8dc",
+        "server": "22f77384684a5c2b",
+        "topic": "3/2/1",
+        "outputtopic": "",
+        "dpt": "1.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Avize 1 Feedback",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 160,
+        "y": 60,
+        "wires": [
+            [
+                "6dbfbf873096b34d",
+                "adb1e210e7a6bec1"
+            ]
+        ]
+    },
+    {
+        "id": "adb1e210e7a6bec1",
+        "type": "ui_switch",
+        "z": "43b22494dce5e8dc",
+        "name": "",
+        "label": "Avize 1 Anahtar",
+        "tooltip": "",
+        "group": "543e0315dcb6b404",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "5ac19e9271d41a1b"
+            ]
+        ]
+    },
+    {
+        "id": "ed211117.1dfac",
+        "type": "knxUltimateSceneController",
+        "z": "43b22494dce5e8dc",
+        "server": "22f77384684a5c2b",
+        "name": "Recall: Panasonic Push Button 1 Short press/Save: Long press",
+        "outputtopic": "",
+        "topic": "3/1/2",
+        "dpt": "18.001",
+        "topicTrigger": "{save_recall:0, scenenumber:1}",
+        "topicSave": "3/1/2",
+        "dptSave": "18.001",
+        "topicSaveTrigger": "{save_recall:1, scenenumber:1}",
+        "propertyType": {},
+        "rules": [
+            {
+                "topic": "1/1/3",
+                "devicename": "Oturma Odası avize 1 kapat",
+                "dpt": "1.001",
+                "send": "false"
+            },
+            {
+                "topic": "3/1/1",
+                "devicename": "Koridor Aydınlatma",
+                "dpt": "1.001",
+                "send": "false"
+            },
+            {
+                "topic": "2/1/4",
+                "devicename": "Yatak Odası avize kapat",
+                "dpt": "1.001",
+                "send": "false"
+            },
+            {
+                "topic": "1/1/4",
+                "devicename": "Oturma Odası avize 1 kapat",
+                "dpt": "1.001",
+                "send": "false"
+            },
+            {
+                "topic": "2/1/5",
+                "devicename": "Lambader",
+                "dpt": "5.001",
+                "send": "0"
+            },
+            {
+                "topic": "1/1/6",
+                "devicename": "salon perde aç",
+                "dpt": "5.001",
+                "send": "0"
+            },
+            {
+                "topic": "2/1/6",
+                "devicename": "Yatak odası perde aç",
+                "dpt": "5.001",
+                "send": "0"
+            }
+        ],
+        "x": 890,
+        "y": 240,
+        "wires": [
+            [
+                "7e65bfe1.c34ac8"
+            ]
+        ]
+    },
+    {
+        "id": "7e65bfe1.c34ac8",
+        "type": "debug",
+        "z": "43b22494dce5e8dc",
+        "name": "debug out1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "aeea8d70.9331a",
+        "type": "comment",
+        "z": "43b22494dce5e8dc",
+        "name": "Gündüz Senaryosu, Senaryo numarası: 1",
+        "info": "",
+        "x": 820,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8df946a261479e75",
+        "type": "knxUltimateSceneController",
+        "z": "43b22494dce5e8dc",
+        "server": "22f77384684a5c2b",
+        "name": "Recall: Panasonic Push Button 2 Short press/Save: Long press",
+        "outputtopic": "",
+        "topic": "3/1/3",
+        "dpt": "18.001",
+        "topicTrigger": "{save_recall:0, scenenumber:2}",
+        "topicSave": "3/1/3",
+        "dptSave": "18.001",
+        "topicSaveTrigger": "{save_recall:1, scenenumber:2}",
+        "propertyType": {},
+        "rules": [
+            {
+                "topic": "1/1/6",
+                "devicename": " Oturma Odası perde kapat",
+                "dpt": "5.001",
+                "send": "100"
+            },
+            {
+                "topic": "2/1/6",
+                "devicename": " Yatak Odası perde kapat",
+                "dpt": "5.001",
+                "send": "100"
+            },
+            {
+                "topic": "wait",
+                "devicename": "Wait 10 seconds. (s=second, m=minute, h=hour)",
+                "dpt": "1.001",
+                "send": "5s"
+            },
+            {
+                "topic": "1/1/3",
+                "devicename": " Oturma Odası avize 1 aç",
+                "dpt": "1.001",
+                "send": "true"
+            },
+            {
+                "topic": "1/1/4",
+                "devicename": " Oturma Odası avize 2 aç",
+                "dpt": "1.001",
+                "send": "true"
+            },
+            {
+                "topic": "2/1/4",
+                "devicename": " Yatak Odası avize aç",
+                "dpt": "1.001",
+                "send": "true"
+            }
+        ],
+        "x": 870,
+        "y": 360,
+        "wires": [
+            [
+                "7614d2f7d17e11a8"
+            ]
+        ]
+    },
+    {
+        "id": "7614d2f7d17e11a8",
+        "type": "debug",
+        "z": "43b22494dce5e8dc",
+        "name": "debug out1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "09856401180ca153",
+        "type": "comment",
+        "z": "43b22494dce5e8dc",
+        "name": "Gece Senaryosu, Senaryo numarası: 2",
+        "info": "",
+        "x": 790,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "68290b05441bb270",
+        "type": "ui_button",
+        "z": "43b22494dce5e8dc",
+        "name": "",
+        "group": "543e0315dcb6b404",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Gece Senaryosunu Aktif Et",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "4cd556d1a9ec1143"
+            ]
+        ]
+    },
+    {
+        "id": "4cd556d1a9ec1143",
+        "type": "function",
+        "z": "43b22494dce5e8dc",
+        "name": "Gece senaryosunu çağır",
+        "func": "msg.recallscene = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "8df946a261479e75"
+            ]
+        ]
+    },
+    {
+        "id": "a419b3bf1cb87d88",
+        "type": "ui_button",
+        "z": "43b22494dce5e8dc",
+        "name": "",
+        "group": "543e0315dcb6b404",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Gündüz Senaryosunu Aktif Et",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "6536b5745229edca"
+            ]
+        ]
+    },
+    {
+        "id": "6536b5745229edca",
+        "type": "function",
+        "z": "43b22494dce5e8dc",
+        "name": "Gündüz senaryosunu çağır",
+        "func": "msg.recallscene = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "ed211117.1dfac"
+            ]
+        ]
+    },
+    {
+        "id": "70a08b1f48f42308",
+        "type": "knxUltimate",
+        "z": "43b22494dce5e8dc",
+        "server": "22f77384684a5c2b",
+        "topic": "3/1/4",
+        "outputtopic": "",
+        "dpt": "9.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Thermostat Set Değeri",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 720,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e96c31ee9f1d865",
+        "type": "ui_numeric",
+        "z": "43b22494dce5e8dc",
+        "name": "Sıcaklık Set Değeri",
+        "label": "Sıcaklık Set Değeri",
+        "tooltip": "",
+        "group": "543e0315dcb6b404",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "32",
+        "step": 1,
+        "className": "",
+        "x": 470,
+        "y": 480,
+        "wires": [
+            [
+                "70a08b1f48f42308"
+            ]
+        ]
+    },
+    {
+        "id": "cd16fd3ac6afa421",
+        "type": "knxUltimate",
+        "z": "43b22494dce5e8dc",
+        "server": "22f77384684a5c2b",
+        "topic": "3/1/4",
+        "outputtopic": "",
+        "dpt": "9.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Thermostat Set Değeri Feedback",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "0e96c31ee9f1d865",
+                "2ec44efd47a52a4d"
+            ]
+        ]
+    },
+    {
+        "id": "2ec44efd47a52a4d",
+        "type": "ui_gauge",
+        "z": "43b22494dce5e8dc",
+        "name": "",
+        "group": "543e0315dcb6b404",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Sıcaklık Set Değeri",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "32",
+        "colors": [
+            "#acddfb",
+            "#00ff00",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 470,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "8c32799020beb79c",
+        "type": "knxUltimate",
+        "z": "43b22494dce5e8dc",
+        "server": "22f77384684a5c2b",
+        "topic": "4/1/0",
+        "outputtopic": "",
+        "dpt": "9.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Thermostat Ortam Sıcaklığı",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 150,
+        "y": 620,
+        "wires": [
+            [
+                "142e958478b10085"
+            ]
+        ]
+    },
+    {
+        "id": "142e958478b10085",
+        "type": "ui_gauge",
+        "z": "43b22494dce5e8dc",
+        "name": "",
+        "group": "543e0315dcb6b404",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Ortam sıcaklığı",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "32",
+        "colors": [
+            "#acddfb",
+            "#00ff00",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 480,
+        "y": 620,
+        "wires": []
     },
     {
         "id": "575eab1ba8592c5e",
@@ -83,15 +874,15 @@
         "label": "Lambader Anahtar",
         "tooltip": "",
         "group": "eab0440bee638c40",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
-        "outs": "all",
+        "outs": "end",
         "topic": "topic",
         "topicType": "msg",
         "min": 0,
-        "max": 10,
+        "max": "100",
         "step": 1,
         "className": "",
         "x": 430,
@@ -99,133 +890,6 @@
         "wires": [
             [
                 "8b01473fa6c36af1"
-            ]
-        ]
-    },
-    {
-        "id": "b078f861c3312dc5",
-        "type": "ui_switch",
-        "z": "0fac4a1004299801",
-        "name": "",
-        "label": "Avize 1 Anahtar",
-        "tooltip": "",
-        "group": "8e18797ccc06bab1",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 980,
-        "y": 340,
-        "wires": [
-            [
-                "ed337705940e56cf"
-            ]
-        ]
-    },
-    {
-        "id": "e51151a8f654ece6",
-        "type": "ui_switch",
-        "z": "0fac4a1004299801",
-        "name": "",
-        "label": "Avize 2 Anahtar",
-        "tooltip": "",
-        "group": "8e18797ccc06bab1",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 980,
-        "y": 400,
-        "wires": [
-            [
-                "151a7be894124b6d"
-            ]
-        ]
-    },
-    {
-        "id": "b64a178eb4c45469",
-        "type": "ui_slider",
-        "z": "0fac4a1004299801",
-        "name": "",
-        "label": "Lambader Anahtar",
-        "tooltip": "",
-        "group": "8e18797ccc06bab1",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": 10,
-        "step": 1,
-        "className": "",
-        "x": 990,
-        "y": 460,
-        "wires": [
-            [
-                "a88849e76ee10e80"
-            ]
-        ]
-    },
-    {
-        "id": "4c2d1da2209452d1",
-        "type": "ui_colour_picker",
-        "z": "0fac4a1004299801",
-        "name": "",
-        "label": "",
-        "group": "8e18797ccc06bab1",
-        "format": "hex",
-        "outformat": "string",
-        "showSwatch": true,
-        "showPicker": false,
-        "showValue": false,
-        "showHue": false,
-        "showAlpha": false,
-        "showLightness": true,
-        "square": "false",
-        "dynOutput": "false",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 970,
-        "y": 520,
-        "wires": [
-            [
-                "47248b059ec9768a"
             ]
         ]
     },
@@ -292,9 +956,9 @@
         "type": "knxUltimate",
         "z": "0fac4a1004299801",
         "server": "22f77384684a5c2b",
-        "topic": "1/1/5",
+        "topic": "2/1/5",
         "outputtopic": "",
-        "dpt": "1.001",
+        "dpt": "5.001",
         "initialread": 0,
         "notifyreadrequest": false,
         "notifyresponse": false,
@@ -312,122 +976,6 @@
         "passthrough": "no",
         "x": 660,
         "y": 160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ed337705940e56cf",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/1/6",
-        "outputtopic": "",
-        "dpt": "1.001",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "Avize 1",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 1190,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "151a7be894124b6d",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/1/6",
-        "outputtopic": "",
-        "dpt": "1.001",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "Avize 2",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 1190,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a88849e76ee10e80",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/1/8",
-        "outputtopic": "",
-        "dpt": "1.001",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "Lambader",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 1200,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "47248b059ec9768a",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/1/9",
-        "outputtopic": "",
-        "dpt": "232.600",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "color picker",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 1200,
-        "y": 520,
         "wires": [
             []
         ]
@@ -499,9 +1047,9 @@
         "type": "knxUltimate",
         "z": "0fac4a1004299801",
         "server": "22f77384684a5c2b",
-        "topic": "1/2/5",
+        "topic": "2/2/5",
         "outputtopic": "",
-        "dpt": "1.001",
+        "dpt": "5.001",
         "initialread": 0,
         "notifyreadrequest": false,
         "notifyresponse": false,
@@ -521,260 +1069,8 @@
         "y": 160,
         "wires": [
             [
-                "817fdb20ad5458d6"
-            ]
-        ]
-    },
-    {
-        "id": "052e7d7e5e2e3689",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/2/6",
-        "outputtopic": "",
-        "dpt": "1.001",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "Avize 1 Feedback",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 720,
-        "y": 340,
-        "wires": [
-            [
-                "b078f861c3312dc5"
-            ]
-        ]
-    },
-    {
-        "id": "a4b0028ab81dc877",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/2/7",
-        "outputtopic": "",
-        "dpt": "1.001",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "Avize 2 Feedback",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 720,
-        "y": 400,
-        "wires": [
-            [
-                "e51151a8f654ece6"
-            ]
-        ]
-    },
-    {
-        "id": "a512b78990217c48",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/2/8",
-        "outputtopic": "",
-        "dpt": "1.001",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "Lambader Feedback",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 710,
-        "y": 460,
-        "wires": [
-            [
-                "b64a178eb4c45469"
-            ]
-        ]
-    },
-    {
-        "id": "c96c18c71514e3f9",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/2/9",
-        "outputtopic": "",
-        "dpt": "232.600",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "color picker Feedback",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 700,
-        "y": 520,
-        "wires": [
-            [
-                "4c2d1da2209452d1"
-            ]
-        ]
-    },
-    {
-        "id": "6dbfbf873096b34d",
-        "type": "ui_switch",
-        "z": "0fac4a1004299801",
-        "name": "",
-        "label": "Avize 1 Anahtar",
-        "tooltip": "",
-        "group": "543e0315dcb6b404",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 380,
-        "y": 720,
-        "wires": [
-            [
-                "5ac19e9271d41a1b"
-            ]
-        ]
-    },
-    {
-        "id": "5ac19e9271d41a1b",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/1/10",
-        "outputtopic": "",
-        "dpt": "1.001",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "Avize 1",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 570,
-        "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4cce9a1e931074f0",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/2/10",
-        "outputtopic": "",
-        "dpt": "1.001",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "Avize 1 Feedback",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 140,
-        "y": 720,
-        "wires": [
-            [
-                "6dbfbf873096b34d",
-                "adb1e210e7a6bec1"
-            ]
-        ]
-    },
-    {
-        "id": "adb1e210e7a6bec1",
-        "type": "ui_switch",
-        "z": "0fac4a1004299801",
-        "name": "",
-        "label": "Avize 1 Anahtar",
-        "tooltip": "",
-        "group": "543e0315dcb6b404",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 380,
-        "y": 780,
-        "wires": [
-            [
-                "5ac19e9271d41a1b"
+                "817fdb20ad5458d6",
+                "8273901f2ad2ead3"
             ]
         ]
     },
@@ -783,22 +1079,22 @@
         "type": "ui_slider",
         "z": "0fac4a1004299801",
         "name": "",
-        "label": "Lambader Anahtar",
+        "label": "Perde Anahtar",
         "tooltip": "",
         "group": "eab0440bee638c40",
-        "order": 3,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": true,
-        "outs": "all",
+        "outs": "end",
         "topic": "topic",
         "topicType": "msg",
         "min": 0,
-        "max": 10,
+        "max": "100",
         "step": 1,
         "className": "",
-        "x": 430,
-        "y": 220,
+        "x": 440,
+        "y": 320,
         "wires": [
             [
                 "1080ae67660f6897"
@@ -810,9 +1106,216 @@
         "type": "knxUltimate",
         "z": "0fac4a1004299801",
         "server": "22f77384684a5c2b",
-        "topic": "1/1/5",
+        "topic": "1/1/6",
+        "outputtopic": "",
+        "dpt": "5.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Perde",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 670,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf87b2fddb4bfe10",
+        "type": "knxUltimate",
+        "z": "0fac4a1004299801",
+        "server": "22f77384684a5c2b",
+        "topic": "1/2/6",
+        "outputtopic": "",
+        "dpt": "5.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Perde Feedback",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "350283f2a1a5971d",
+                "b331952827c76407"
+            ]
+        ]
+    },
+    {
+        "id": "b331952827c76407",
+        "type": "ui_gauge",
+        "z": "0fac4a1004299801",
+        "name": "",
+        "group": "eab0440bee638c40",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Perde Seviyesi",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#000000",
+            "#999933",
+            "#ffff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 440,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "8273901f2ad2ead3",
+        "type": "ui_gauge",
+        "z": "0fac4a1004299801",
+        "name": "",
+        "group": "eab0440bee638c40",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Lambader Parlaklık",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#000000",
+            "#999933",
+            "#ffff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 430,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e51151a8f654ece6",
+        "type": "ui_switch",
+        "z": "f410ce01cf4c6bc4",
+        "name": "",
+        "label": "Avize Anahtar",
+        "tooltip": "",
+        "group": "8e18797ccc06bab1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 440,
+        "y": 140,
+        "wires": [
+            [
+                "151a7be894124b6d"
+            ]
+        ]
+    },
+    {
+        "id": "b64a178eb4c45469",
+        "type": "ui_slider",
+        "z": "f410ce01cf4c6bc4",
+        "name": "",
+        "label": "Lambader Anahtar",
+        "tooltip": "",
+        "group": "8e18797ccc06bab1",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "a88849e76ee10e80"
+            ]
+        ]
+    },
+    {
+        "id": "151a7be894124b6d",
+        "type": "knxUltimate",
+        "z": "f410ce01cf4c6bc4",
+        "server": "22f77384684a5c2b",
+        "topic": "2/1/4",
         "outputtopic": "",
         "dpt": "1.001",
+        "initialread": 0,
+        "notifyreadrequest": false,
+        "notifyresponse": false,
+        "notifywrite": true,
+        "notifyreadrequestalsorespondtobus": false,
+        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
+        "listenallga": false,
+        "name": "Avize",
+        "outputtype": "write",
+        "outputRBE": true,
+        "inputRBE": false,
+        "formatmultiplyvalue": 1,
+        "formatnegativevalue": "leave",
+        "formatdecimalsvalue": 999,
+        "passthrough": "no",
+        "x": 650,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a88849e76ee10e80",
+        "type": "knxUltimate",
+        "z": "f410ce01cf4c6bc4",
+        "server": "22f77384684a5c2b",
+        "topic": "2/1/5",
+        "outputtopic": "",
+        "dpt": "5.001",
         "initialread": 0,
         "notifyreadrequest": false,
         "notifyresponse": false,
@@ -829,17 +1332,17 @@
         "formatdecimalsvalue": 999,
         "passthrough": "no",
         "x": 660,
-        "y": 220,
+        "y": 200,
         "wires": [
             []
         ]
     },
     {
-        "id": "bf87b2fddb4bfe10",
+        "id": "a4b0028ab81dc877",
         "type": "knxUltimate",
-        "z": "0fac4a1004299801",
+        "z": "f410ce01cf4c6bc4",
         "server": "22f77384684a5c2b",
-        "topic": "1/2/5",
+        "topic": "2/2/4",
         "outputtopic": "",
         "dpt": "1.001",
         "initialread": 0,
@@ -849,7 +1352,7 @@
         "notifyreadrequestalsorespondtobus": false,
         "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
         "listenallga": false,
-        "name": "Lambader Feedback",
+        "name": "Avize Feedback",
         "outputtype": "write",
         "outputRBE": true,
         "inputRBE": false,
@@ -857,22 +1360,22 @@
         "formatnegativevalue": "leave",
         "formatdecimalsvalue": 999,
         "passthrough": "no",
-        "x": 170,
-        "y": 220,
+        "x": 180,
+        "y": 140,
         "wires": [
             [
-                "350283f2a1a5971d"
+                "e51151a8f654ece6"
             ]
         ]
     },
     {
-        "id": "3d101cf6f3e08915",
+        "id": "a512b78990217c48",
         "type": "knxUltimate",
-        "z": "0fac4a1004299801",
+        "z": "f410ce01cf4c6bc4",
         "server": "22f77384684a5c2b",
-        "topic": "1/2/5",
+        "topic": "2/2/5",
         "outputtopic": "",
-        "dpt": "1.001",
+        "dpt": "5.001",
         "initialread": 0,
         "notifyreadrequest": false,
         "notifyresponse": false,
@@ -889,19 +1392,49 @@
         "formatdecimalsvalue": 999,
         "passthrough": "no",
         "x": 170,
-        "y": 380,
+        "y": 200,
         "wires": [
-            []
+            [
+                "b64a178eb4c45469",
+                "bd9e84eac143f8b9"
+            ]
         ]
     },
     {
-        "id": "0bd16bf5b5e75987",
+        "id": "71b2d9c204893335",
+        "type": "ui_slider",
+        "z": "f410ce01cf4c6bc4",
+        "name": "",
+        "label": "Perde Anahtar",
+        "tooltip": "",
+        "group": "8e18797ccc06bab1",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 440,
+        "y": 360,
+        "wires": [
+            [
+                "c3223350c7705285"
+            ]
+        ]
+    },
+    {
+        "id": "c3223350c7705285",
         "type": "knxUltimate",
-        "z": "0fac4a1004299801",
+        "z": "f410ce01cf4c6bc4",
         "server": "22f77384684a5c2b",
-        "topic": "1/1/5",
+        "topic": "2/1/6",
         "outputtopic": "",
-        "dpt": "1.001",
+        "dpt": "5.001",
         "initialread": 0,
         "notifyreadrequest": false,
         "notifyresponse": false,
@@ -909,7 +1442,7 @@
         "notifyreadrequestalsorespondtobus": false,
         "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
         "listenallga": false,
-        "name": "Lambader",
+        "name": "Perde",
         "outputtype": "write",
         "outputRBE": true,
         "inputRBE": false,
@@ -917,20 +1450,20 @@
         "formatnegativevalue": "leave",
         "formatdecimalsvalue": 999,
         "passthrough": "no",
-        "x": 380,
-        "y": 340,
+        "x": 670,
+        "y": 360,
         "wires": [
             []
         ]
     },
     {
-        "id": "83500b30814a175f",
+        "id": "26d3225de3c67c48",
         "type": "knxUltimate",
-        "z": "0fac4a1004299801",
+        "z": "f410ce01cf4c6bc4",
         "server": "22f77384684a5c2b",
-        "topic": "1/1/5",
+        "topic": "2/2/6",
         "outputtopic": "",
-        "dpt": "1.001",
+        "dpt": "5.001",
         "initialread": 0,
         "notifyreadrequest": false,
         "notifyresponse": false,
@@ -938,7 +1471,7 @@
         "notifyreadrequestalsorespondtobus": false,
         "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
         "listenallga": false,
-        "name": "Lambader",
+        "name": "Perde Feedback",
         "outputtype": "write",
         "outputRBE": true,
         "inputRBE": false,
@@ -946,393 +1479,69 @@
         "formatnegativevalue": "leave",
         "formatdecimalsvalue": 999,
         "passthrough": "no",
-        "x": 380,
-        "y": 380,
+        "x": 180,
+        "y": 360,
         "wires": [
-            []
+            [
+                "71b2d9c204893335",
+                "3bdf1f91e3042264"
+            ]
         ]
     },
     {
-        "id": "52052f884db03a6a",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/1/5",
-        "outputtopic": "",
-        "dpt": "1.001",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "Lambader",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 380,
+        "id": "3bdf1f91e3042264",
+        "type": "ui_gauge",
+        "z": "f410ce01cf4c6bc4",
+        "name": "",
+        "group": "8e18797ccc06bab1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Perde Seviyesi",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#000000",
+            "#a1a329",
+            "#ffff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 440,
         "y": 420,
-        "wires": [
-            []
-        ]
+        "wires": []
     },
     {
-        "id": "7afd8795a479f91c",
-        "type": "knxUltimate",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "topic": "1/1/5",
-        "outputtopic": "",
-        "dpt": "1.001",
-        "initialread": 0,
-        "notifyreadrequest": false,
-        "notifyresponse": false,
-        "notifywrite": true,
-        "notifyreadrequestalsorespondtobus": false,
-        "notifyreadrequestalsorespondtobusdefaultvalueifnotinitialized": "0",
-        "listenallga": false,
-        "name": "Lambader",
-        "outputtype": "write",
-        "outputRBE": true,
-        "inputRBE": false,
-        "formatmultiplyvalue": 1,
-        "formatnegativevalue": "leave",
-        "formatdecimalsvalue": 999,
-        "passthrough": "no",
-        "x": 380,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fbce23ea9ab9dab2",
-        "type": "knxUltimateSceneController",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
+        "id": "bd9e84eac143f8b9",
+        "type": "ui_gauge",
+        "z": "f410ce01cf4c6bc4",
         "name": "",
-        "outputtopic": "",
-        "topic": "1 1 11",
-        "dpt": "18.001",
-        "topicTrigger": "{save_recall:0, scenenumber:2}",
-        "topicSave": "",
-        "dptSave": "",
-        "topicSaveTrigger": "true",
-        "property": "payload",
-        "propertyType": {},
-        "rules": [
-            {
-                "topic": "",
-                "devicename": "",
-                "dpt": null,
-                "send": ""
-            }
-        ],
-        "x": 110,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ed211117.1dfac",
-        "type": "knxUltimateSceneController",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "name": "Recall: Panasonic Push Button 1 Short press/Save: Long press",
-        "outputtopic": "",
-        "topic": "0/0/7",
-        "dpt": "18.001",
-        "topicTrigger": "{save_recall:0, scenenumber:1}",
-        "topicSave": "0/0/8",
-        "dptSave": "18.001",
-        "topicSaveTrigger": "{save_recall:1, scenenumber:1}",
-        "propertyType": {},
-        "rules": [
-            {
-                "topic": "0/1/1",
-                "devicename": "Blind Control",
-                "dpt": "5.001",
-                "send": "80"
-            },
-            {
-                "topic": "wait",
-                "devicename": "Wait 10 seconds. (s=second, m=minute, h=hour)",
-                "dpt": "1.001",
-                "send": "5s"
-            },
-            {
-                "topic": "0/1/22",
-                "devicename": "Lamp Control",
-                "dpt": "1.001",
-                "send": "false"
-            }
-        ],
-        "x": 1450,
-        "y": 760,
-        "wires": [
-            [
-                "7e65bfe1.c34ac8"
-            ]
-        ]
-    },
-    {
-        "id": "7e65bfe1.c34ac8",
-        "type": "debug",
-        "z": "0fac4a1004299801",
-        "name": "debug out1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "aeea8d70.9331a",
-        "type": "comment",
-        "z": "0fac4a1004299801",
-        "name": "Day Scene, Scene number: 1",
-        "info": "",
-        "x": 1340,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "8df946a261479e75",
-        "type": "knxUltimateSceneController",
-        "z": "0fac4a1004299801",
-        "server": "22f77384684a5c2b",
-        "name": "Recall: Panasonic Push Button 2 Short press/Save: Long press",
-        "outputtopic": "",
-        "topic": "0/0/7",
-        "dpt": "18.001",
-        "topicTrigger": "{save_recall:0, scenenumber:2}",
-        "topicSave": "0/0/8",
-        "dptSave": "18.001",
-        "topicSaveTrigger": "{save_recall:1, scenenumber:2}",
-        "propertyType": {},
-        "rules": [
-            {
-                "topic": "0/1/1",
-                "devicename": "Blind Control",
-                "dpt": "5.001",
-                "send": "0"
-            },
-            {
-                "topic": "wait",
-                "devicename": "Wait 10 seconds. (s=second, m=minute, h=hour)",
-                "dpt": "1.001",
-                "send": "5s"
-            },
-            {
-                "topic": "0/1/22",
-                "devicename": "Lamp Control",
-                "dpt": "1.001",
-                "send": "true"
-            }
-        ],
-        "x": 1450,
-        "y": 880,
-        "wires": [
-            [
-                "7614d2f7d17e11a8"
-            ]
-        ]
-    },
-    {
-        "id": "7614d2f7d17e11a8",
-        "type": "debug",
-        "z": "0fac4a1004299801",
-        "name": "debug out1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "09856401180ca153",
-        "type": "comment",
-        "z": "0fac4a1004299801",
-        "name": "Evening Scene, Scene number: 2",
-        "info": "",
-        "x": 1350,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "68290b05441bb270",
-        "type": "ui_button",
-        "z": "0fac4a1004299801",
-        "name": "",
-        "group": "eab0440bee638c40",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Activate Night Scene",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 900,
-        "y": 880,
-        "wires": [
-            [
-                "4cd556d1a9ec1143"
-            ]
-        ]
-    },
-    {
-        "id": "4cd556d1a9ec1143",
-        "type": "function",
-        "z": "0fac4a1004299801",
-        "name": "recall Night Scene",
-        "func": "msg.recallscene = true;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1110,
-        "y": 880,
-        "wires": [
-            [
-                "8df946a261479e75"
-            ]
-        ]
-    },
-    {
-        "id": "a419b3bf1cb87d88",
-        "type": "ui_button",
-        "z": "0fac4a1004299801",
-        "name": "",
-        "group": "eab0440bee638c40",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Activate Day Scene",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 890,
-        "y": 760,
-        "wires": [
-            [
-                "6536b5745229edca"
-            ]
-        ]
-    },
-    {
-        "id": "6536b5745229edca",
-        "type": "function",
-        "z": "0fac4a1004299801",
-        "name": "recall Day Scene",
-        "func": "msg.recallscene = true;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1110,
-        "y": 760,
-        "wires": [
-            [
-                "ed211117.1dfac"
-            ]
-        ]
-    },
-    {
-        "id": "eab0440bee638c40",
-        "type": "ui_group",
-        "name": "Salon",
-        "tab": "ba71f8889e6871d0",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "8e18797ccc06bab1",
-        "type": "ui_group",
-        "name": "Oda 1",
-        "tab": "ba71f8889e6871d0",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "22f77384684a5c2b",
-        "type": "knxUltimate-config",
-        "host": "192.168.1.167",
-        "port": "3671",
-        "physAddr": "15.15.22",
-        "hostProtocol": "TunnelUDP",
-        "suppressACKRequest": false,
-        "csv": "",
-        "KNXEthInterface": "Auto",
-        "KNXEthInterfaceManuallyInput": "",
-        "statusDisplayLastUpdate": true,
-        "statusDisplayDeviceNameWhenALL": true,
-        "statusDisplayDataPoint": false,
-        "stopETSImportIfNoDatapoint": "stop",
-        "loglevel": "error",
-        "name": "KNX Gateway",
-        "localEchoInTunneling": true,
-        "delaybetweentelegrams": "50",
-        "delaybetweentelegramsfurtherdelayREAD": "1",
-        "ignoreTelegramsWithRepeatedFlag": false,
-        "autoReconnect": true
-    },
-    {
-        "id": "543e0315dcb6b404",
-        "type": "ui_group",
-        "name": "Koridor",
-        "tab": "ba71f8889e6871d0",
+        "group": "8e18797ccc06bab1",
         "order": 3,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "ba71f8889e6871d0",
-        "type": "ui_tab",
-        "name": "Evim",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Lambader Parlaklık",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#000000",
+            "#999933",
+            "#ffff00"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 450,
+        "y": 260,
+        "wires": []
     }
 ]
