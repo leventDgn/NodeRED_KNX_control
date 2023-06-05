@@ -88,10 +88,12 @@ Node-RED'i Orange Pi Zero'ya kurmak için şu adımları izlemeniz gerekir:
 
 1.	Öncelikle Orange Pi Zero'nuzu internete bağlamanız gerekiyor. Bunu bir ethernet kablosu bağlayarak veya bir Wi-Fi bağlantısı kurarak yapabilirsiniz.
 2.	Ardından, Orange Pi Zero'nuzda bir terminal penceresi açmanız gerekir.
-3.	Node-RED'i yüklemek için aşağıdaki komutu çalıştırın:
+3.	Node-RED'i yüklemek için aşağıdaki komutu çalıştırın, bu scriptt ilgili linkten node-RED’i indirip kuracaktır. 
  ```
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
  ```
+Diğer node-RED yükleme yöntemleri için aşağıdaki adrese bakabilirsiniz.
+https://nodered.org/docs/getting-started/local
 
 4.	Node-RED kurulduktan sonra, aşağıdaki komutu çalıştırarak başlatabilirsiniz:
 
@@ -108,32 +110,77 @@ node-red-start
  sudo systemctl enable nodered.service
  ```
  # NodeRED'de KNX Kontrolü Nasıl Oluşturulur
- NodeRED, kullanıcıların farklı cihazlar ve hizmetler arasında veri akışı oluşturmasını sağlayan güçlü bir görsel programlama aracıdır. KNX ev sistemi de dahil olmak üzere bir dizi farklı donanım cihazını kontrol etmek için kullanılabilir. NodeRED üzerinde bir KNX kontrolü oluşturma adımları şunlardır:
+Node-RED üzerinde bir KNX kontrolü oluşturma adımları şunlardır:
  
-## 1. Adım: KNX Kontrol Noktalarını Kurun
+## 1. Adım: KNX Kontrol Kütüphanelerini Kurma
 
-Node-RED üzerinde bir KNX kontrolü oluşturmanın ilk adımı, KNX kontrol noktalarını kurmaktır. Bu kontrol noktaları, kullanıcıların KNX sisteminden veri gönderip almasına izin verir. KNX kontrol noktalarını kurmak için, kullanıcılar Node-RED Palet Yöneticisine gidebilir ve "node-red-contrib-knx" için arama yapabilir.
+Node-RED üzerinde bir KNX kontrolü oluşturmanın ilk adımı, tasarıma KNX kontrol noktalarını eklemektir. Bu kontrol noktaları, kullanıcıların KNX sisteminden veri gönderip almasına izin verir. KNX kontrol noktalarını ekleyebilmek için KNX Kontrol kütüphanesini kurmak gerekir. 
 
-## 2. Adım: Akışa KNX Kontrol Noktalarını Ekleyin
+Bunun için;
+Node-RED Palet Yöneticisine gidilir(MenüSettingsPalette) ve "node-red-contrib-knx-ultimate" için arama yapılır. Listeden “node-red-contrib-knx-ultimate” kütüphanesi seçilerek yüklenir.
 
-KNX kontrol noktalarını kurulduktan sonra, kullanıcılar bunları Node-RED akışlarına ekleyebilir. Bu, KNX kontrol noktalarını akış tuvaline sürükleyip bırakılarak yapılabilir.
- 
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/c0f58d11-5d20-470a-a17e-ebd4a905a63b)
+
+
+## 2. Adım: Akışa KNX Kontrol Noktalarını Ekleme
+
+KNX kontrol kütüphanesini kurduktan sonra, kullanıcılar bunları Node-RED akışlarına ekleyebilir. Bu, KNX kontrol noktalarını akış tuvaline sürükleyip bırakılarak yapılabilir. 
+
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/abb2ebcc-5d07-4577-b306-ccba2cf833d9)
+
+ ![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/37a0183e-7902-424f-89f9-f876bd5f162a)
+
 ## 3. Adım: KNX Kontrol Noktalarını Yapılandırın
 
-Kullanıcıların, akışa eklenen KNX kontrol noktalarını KNX sistemlerine bağlanacak şekilde yapılandırması gerekmektedir. Bunu, kontrol noktalarına çift tıklayarak, grup adresi ve bağlantı detayları gibi gerekli bilgileri girerek yapabilir.
+Kullanıcıların, akışa eklenen KNX kontrol noktalarını KNX sistemlerine bağlanacak şekilde yapılandırması gerekmektedir. Bunun için;
 
-## 4. Adım: Bir Kontrol Arayüzü Oluşturun
+Kontrol noktalarına çift tıklanarak, konfigürasyon penceresi açılır.
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/dccd5e35-ee98-4a95-b070-4c88c5ebf142)
 
-KNX kontrol noktaları yapılandırıldıktan sonra, kullanıcılar KNX sistemleri için bir kontrol arabirimi oluşturabilir. Akış tuvaline anahtarlar, kaydırıcılar ve düğmeler gibi kontrol noktaları eklenebilir ve ardından bunlar KNX kontrol noktalarına bağlanabilirler.
+Gateway kısmından KNX bus’a bağlanılacak KNXIP gateway seçilir. Daha sonra telegramın gönderileceği grup adresi ve Telegramın Data tipi(Datapoin) seçilirek. Done tuşuna basılır.
 
-## 5. Adım: Bulut bağlantısı üzerinden kontrol
+## 4. Adım: Kontrol Arayüz Kütüphanesinin Yüklenmesi
 
-Yapılandırılan akış ve oluşturulan kontrol arabirimi ile kullanıcılar akışı Node-RED sunucularına gönderebilir. Bu, KNX sistemlerini internet vasıtası aracılığıyla dünya üzerindeki herhangi bir yerden kontrol etmelerini sağlayacaktır.
+Kontrol noktalarını ekleyebilmek için 1. Adımda olduğu gibi Node-RED Palet Yöneticisine gidilir(Menü-->Settings-->Palette) ve " node-red-dashboard" için arama yapılır. Listeden “node-red- dashboard” kütüphanesi seçilerek yüklenir.
+
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/31300b83-56d7-49c9-b9de-64fcd90153ab)
+
+## 5. Adım: Kontrol Ara Yüzünün Oluşturulması
+
+Kullanıcılar KNX sistemleri için bir kontrol arabirimi oluşturabilir. Akış tuvaline anahtarlar, kaydırıcılar ve düğmeler gibi kontrol noktaları eklenerek ardından bunlar KNX kontrol noktalarına bağlanabilir. 
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/6f0aad91-8239-4188-8b6c-15fc9a0cc4be)
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/e4fd27ce-709f-4260-a0ec-848cf1b6c833)
+
+## 6. Adım: Geribildirim Mekanizmasının Oluşturulması
+
+KNX sistemlerde bir Telegram gönderildikten sonra bu Telegram’ın işlenip işlenmediği, ya da işlendikten sonraki güncel değeri Geribildirim Grup adresine gönderilir. Bu geri bildirim mekanizması sayesinde bir KNX noktası birden fazla kontrol cihazı tarafından kontrol edilebilir. Ve herhangi bir kontrol cihazı son cihazın durumunu güncellediğinde diğer kontrol cihazlarında da ilgili cihazın durumu güncellenir. 
+
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/dfa9337c-9cf7-4b84-8bc2-8efbce1b4fb6)
+
+## 7. Adım: Geribildirim Mekanizmasının Oluşturulması
+
+Aşağıdaki resimde görüldüğü gibi kontrolleri farklı gruplara atayarak hep daha estetik bir görsel hem de kolay erişilebilir hale getirebiliriz. Bunun için node-RED akışları gruplara ayırmak gerekir.
+
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/ed4a751e-7e87-46c5-8539-4929a92d02cc)
+
+Kontrolleri gruplara ayırmak için kontrol akışa eklendikten sonra, kontrol üzerine çift tıklanır. Açılan ayar penceresinde ilgili kontrolün hangi grup altında görünmesini istiyorsa o grup seçilir. Örnek deki görselde oturma odasındaki avize yi kontrol etmek için bir “switch” kontrolcüsü eklenmiş ve bu kontrolcünün salon kolonunda gözükmesi için grup olarak “Oturma Odası” grubu seçilmiştir.
+
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/f0a6e6ba-ab9f-4b2b-8db1-a035c17ceb52)
+
+## 8. Adım: Farklı Akışların Oluşturulması
+
+Node-RED içerisindeki görsel programlama akışlarının daha okunabilir olması için farklı akış sayfaları ouşturulabilir. Akışlar farklı sayfalarda olsa da UI tarafında görünümde herhangi bir değişiklik olmaz. Yeni bir akış eklemek için MenüFlowsAdd menüsüne tıklanarak yeni bir akış oluşturulur.
+
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/c39e66c8-28fc-4bd0-969e-dd605dc768b1)
+
+## 9. Adım: KNX Sisteminin Kurulumu
+
+Aşağıdaki resimde gösterildiği gibi KNX sistemi koridor, oturma odası ve yatak odası olarak kurulmuştur. Koridorda evin genel ısıtma sistemini kontrol eden 1 termostat, 1 de aydınlatma konumlandırılmıştır. Ayrıca koridorda ki aydınlatmaları kontrol eden 2 çift anahtar, ayrıca senaryoları aktif eden bir çift anahtar konumlandırıldı. Oturma odasında ise 3 aydınlatma, bir perde kontrolü ve bunları kontrol etmek için 4 çift anahtar konumlandırıldı. Yatak odasında ise 2 aydınlatma, bir perde ve bunların kontrolü için 3 çift anahtar konumlandırıldı. Ayrıca sistemin enerjisini sağlamak için bir KNX power supply, Merkezi kontrol birimi olan orange pi ile bağlantı kurabilmek için bir KNXIP gateway kullanılmıştır.
+
+![image](https://github.com/leventDgn/NodeRED_KNX_control/assets/35852515/53c9dfd9-904b-44e5-bd08-9be233cff123)
 
 # Sonuç
-Orange Pi Zero, düşük maliyeti, küçük boyutu ve güçlü performansı ile güvenilir ve verimli tek kartlı bir bilgisayar arayan herkes için ideal bir seçimdir.
-Armbian, Orange Pi Zero gibi ARM tabanlı cihazlarda çalışmak için güçlü ve verimli bir işletim sistemidir.
-Node-RED, IoT uygulamaları geliştirmek için güçlü bir araçtır ve Orange Pi Zero'ya kurulumu kolaydır. Bu yazıda özetlenen adımları izleyerek Orange Pi Zero'nuzda Node-RED'i hızlıca kullanmaya başlayabilir ve kendi IoT uygulamalarınızı geliştirmeye başlayabilirsiniz.
-Sonuç olarak, Node-RED üzerinde bir KNX kontrolü oluşturmak, evdeki bir dizi farklı cihazı otomatikleştirmenin ve kontrol etmenin kolay ve kullanışlı bir yoludur. Kullanıcılar, yukarıda anlattığım adımları takip ederek, kendi özel ihtiyaç ve gereksinimlerine göre uyarlanmış, KNX sistemlerini kolaylıkla kontrol etmelerine olanak tanıyan özel bir kontrol ara yüzünü hızlı bir şekilde oluşturabilir.
+Sonuç olarak, çok uygun maliyetlerde olan Orange Pi Zero tek kartlı bilgisayar üzerine Armbian işletim sistemini kurduk. Ve Node-RED ile çok kullanışlı ve kurulumu kolay bir ara yüz tasarımı yaparak hayata geçirdik. Buda bize Node-RED üzerinde bir KNX kontrolü oluşturmanın, evdeki bir dizi farklı cihazı otomatikleştirmenin ve kontrol etmenin kolay ve kullanışlı bir yolu olduğunu gösterdi.
+ Kullanıcılar, yukarıda anlattığım adımları takip ederek, kendi özel ihtiyaç ve gereksinimlerine göre uyarlanmış, KNX sistemlerini kolaylıkla kontrol etmelerine olanak tanıyan özel bir kontrol ara yüzünü hızlı bir şekilde oluşturabilir.
 
  
