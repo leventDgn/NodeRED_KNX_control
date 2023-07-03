@@ -1,0 +1,3 @@
+Linux Board: https://orangepi.com.tr/orangepi_zero.html
+OS: https://www.armbian.com/orange-pi-zero/
+SD Card Flasher: https://etcher.download/download-etcher/
